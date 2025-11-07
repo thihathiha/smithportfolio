@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <style type="text/tailwindcss">
+        nav ul.desktop li{
+            @apply text-gray-600 px-6 py-2 rounded cursor-pointer hover:text-white hover:bg-teal-700 transition-all duration-200;
+        }
+        nav ul.mobile li{
+            @apply w-full border border-gray-200 pl-4 py-2 text-gray-600 cursor-pointer;
+        }
+        #skill .skillicon{
+            @apply w-[40px] h-[40px] bg-gray-300 rounded-[50%] text-center leading-[40px] mt-2;
+        }
+    </style>
+    <!-- Tailwind CDN  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome CDN  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <!-- Navigation  -->
+    <nav class="w-full h-22 bg-white shadow-sm flex justify-between items-center px-12 fixed top-0 max-sm:h-16 max-sm:px-6">
+        <img src="img/logo.png" alt="Logo" class="w-22 max-sm:w-12" />
+        <ul class="desktop flex gap-8 uppercase tracking-wider text-sm font-semibold max-sm:hidden">
+            <li>Home</li>
+            <li>Skills</li>
+            <li>Recent</li>
+            <li>Client</li>
+            <li>Contact</li>
+        </ul>
+        <!-- For Mobile View  -->
+        <input type="checkbox" id="menu-toggle" class="hidden peer" />
+        <label for="menu-toggle" class="md:hidden cursor-pointer">&#9776;</label>
+        <ul class="mobile hidden peer-checked:block md:!hidden absolute top-16 left-0 w-full bg-white">
+            <li>Home</li>
+            <li>Skills</li>
+            <li>Recent</li>
+            <li>Client</li>
+            <li>Contact</li>
+        </ul>
+        
+        <button class="text-green-600 font-semibold tracking-wide border-b-2 cursor-pointer">Say Hi!</button>
+    </nav>
+
+    <!-- Home Section  -->
+    <section class="w-full mt-32 flex justify-evenly max-sm:flex-col max-sm:items-center max-sm:mt-26">
+        <div class="w-[500px] max-sm:w-[300px]">
+            <img src="img/model.png" alt="Model" />
+        </div>
+        <div class="w-[600px] h-[500px] flex flex-col justify-center max-sm:w-[400px] max-sm:h-[300px] max-sm:items-center">
+            <h1 class="text-6xl font-semibold max-sm:text-5xl">Hello, I am Smith</h1>
+            <p class="text-gray-500 w-[450px] my-6 max-sm:text-center max-sm:px-4">Hey, in this video i am gonna show you how to make a responsive portfolio website only using HTML and TailwindCSS</p>
+            <button class="w-40 h-10 bg-teal-700 text-white rounded-4xl cursor-pointer hover:bg-teal-600">See My Portfolio</button>
+        </div>
+    </section>
+
+    <!-- Skill Section  -->
+    <section id="skill" class="w-full flex justify-center mt-32 max-sm:flex-col max-sm:px-6 max-sm:mt-16 max-sm:items-center">
+        <div class="w-[40%] max-sm:w-[85%]">
+            <span class="text-green-600 uppercase tracking-wider">My Skills</span>
+            <h2 class="text-5xl font-semibold my-4 max-sm:text-4xl">My Experties</h2>
+            <div class="mt-8 ml-4 w-full">
+                <article class="flex mb-6">
+                    <div class="skillicon">
+                        <i class="fa-brands fa-html5 text-red-500"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3>HyperText Markup Language (HTML)</h3>
+                        <p class="w-[300px] text-gray-500 mt-2">I have 3 years experience in HTML and i completed 100+ HTML project.</p>
+                    </div>
+                </article>
+                <article class="flex mb-6">
+                    <div class="skillicon">
+                        <i class="fa-brands fa-css3-alt text-blue-600"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3>Cascading Style Sheets (CSS)</h3>
+                        <p class="w-[300px] text-gray-500 mt-2">I have 3 years experience in CSS and i completed 100+ CSS project.</p>
+                    </div>
+                </article>
+                <article class="flex mb-6">
+                    <div class="skillicon">
+                        <i class="fa-brands fa-square-js text-orange-500"></i>
+                    </div>
+                    <div class="ml-4">
+                        <h3>JavaScript (JS)</h3>
+                        <p class="w-[300px] text-gray-500 mt-2">I have 3 years experience in JavaScript and i completed 100+ JS project.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+        <div class="w-[40%] max-sm:mt-8 max-sm:w-[85%]">
+            <img src="img/skill2.png" alt="skills" />
+        </div>
+    </section>
+
+</body>
+</html>
